@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex flex-column justify-content-center py-5 gradient">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6 col-lg-5">
+        <h2 class="text-center font-weight-bold mt-5">
+          Login to your account
+        </h2>
+        <div class="card mt-3">
+          <div class="card-body">
+            <form class="space-y-6" id="loginform">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group custom-input">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <span class="eye-icon" onclick="togglePasswordVisibility()">
+                  <img src="https://img.icons8.com/ios-glyphs/20/000000/invisible.png" id="eyeIcon"/>
+                </span>
+              </div>
+              <div class="form-group form-check d-flex justify-content-between align-items-center">
+                <div>
+                  <input type="checkbox" class="form-check-input" id="remember-me">
+                  <label class="form-check-label" for="remember-me">Remember me</label>
+                </div>
+                <div>
+                  <a href="forgotPassword.html" class="text-primary">Forgot your password?</a>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="loginbutton">Submit</button>
+              <div class="text-center mt-3">
+                <p>Not have any account? <a href="index.html" class="text-primary">Sign Up</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

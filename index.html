@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex flex-column justify-content-center py-3 gradient">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-6 col-lg-5">
+        <h2 class="text-center font-weight-bold mt-3">
+          Register your new account
+        </h2>
+        <div class="card mt-3">
+          <div class="card-body">
+            <form class="space-y-6" id="registrationform">
+              <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group custom-input">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <span class="eye-icon" onclick="togglePasswordVisibility()">
+                  <img src="https://img.icons8.com/ios-glyphs/20/000000/invisible.png" id="eyeIcon"/>
+                </span>
+              </div>
+              <div class="form-group">
+                <label for="avatar">Avatar</label>
+                <div class="d-flex align-items-center">
+                  <span class="avatar-preview" id="avatarPreview">
+                    <img src="" alt="avatar" id="avatarImage" class="avatar-preview d-none">
+                    <span id="avatarIcon" class="h-8 w-8">  </span>
+                  </span>
+                  <label for="file-input" class="ml-3 btn btn-outline-secondary">
+                    Upload a file
+                    <input type="file" name="avatar" id="file-input" accept=".jpg,.jpeg,.png" onchange="handleFileInputChange(event)" class="d-none">
+                  </label>
+                </div>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary btn-block" id="submitButton">Register</button>
+              </div>
+              <div class="text-center mt-3">
+                <p>Already have an account? <a href="login.html" class="text-primary">Sign In</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
